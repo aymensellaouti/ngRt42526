@@ -1,0 +1,10 @@
+<p>first works!</p>
+
+<div
+  (click)="changeColor()"
+  [style.backgroundColor]="backgroundColor"
+  class="lampe">
+  lampe
+</div>
+<input type="color" [(ngModel)]="backgroundColor">
+<input (change)="changeOpenColor(myInput)" #myInput type="text">
