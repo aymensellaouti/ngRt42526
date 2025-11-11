@@ -1,10 +1,9 @@
-import { Component, computed, signal, viewChildren } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ColorComponent } from 'src/app/components/color/color.component';
 
 @Component({
   selector: 'app-som',
-  imports: [FormsModule, ColorComponent],
+  imports: [FormsModule],
   templateUrl: './som.component.html',
   styleUrl: './som.component.css',
 })
