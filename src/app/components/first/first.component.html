@@ -1,5 +1,7 @@
 <p>first works!</p>
-
+<div class="alert alert-danger">
+  <app-user-info (ccPapa)="showMessage($event)" [section]="'RT4'" [user]="{name: 'douaa', email: 'douaa@gmail.com'}"/>
+</div>
 <div
   (click)="changeColor()"
   [style.backgroundColor]="backgroundColor"
@@ -8,3 +10,4 @@
 </div>
 <input type="color" [(ngModel)]="backgroundColor">
 <input (change)="changeOpenColor(myInput)" #myInput type="text">
+{{backgroundColor}}

@@ -1,5 +1,25 @@
-<p (click)="update()">first-signal works!</p>
+@if (show()) {
+  <p>first-signal works!</p>
+}
+<div class="alert alert-danger">
 
-<input type="number" [(ngModel)]="x" class="form-control">
-<input type="number" [(ngModel)]="y" class="form-control">
-{{ x }} + {{ y }} = {{ z }}
+  <input type="number" [(ngModel)]="x" class="form-control">
+  <input type="number" [(ngModel)]="y" class="form-control">
+  {{ x() }} + {{ y() }} = {{ z() }} / {{doubleZ()}}
+</div>
+<div (click)="addName()" class="aelrt alert-info">
+  <ol class="list-group">
+    @for (name of names(); track name) {
+      <li class="list-group-item">
+        {{$index + 1}} - {{name}}
+      </li>
+    }
+  </ol>
+  {{namesLength()}}
+</div>
+<p>
+  {{counter()}}
+</p>
+
+<button class="btn btn-success" (click)="increment()">Increment</button>
+<button class="btn btn-danger" (click)="reset()">Reset</button>
