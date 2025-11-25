@@ -1,14 +1,41 @@
-<p>first works!</p>
+
+
+<div appHighlight>test custom directive</div>
+<div appHighlight [in]="'white'" [out]="'red'">test custom directive</div>
+<div appHighlight  [in]="'white'" [out]="'black'">test custom directive</div>
+<div appHighlight  [in]="'green'" [out]="'yellow'">test custom directive</div>
+
+<div
+  (click)="interrupteur()"
+  [class]="{
+    'on': isOn(),
+    'off': !isOn(),
+  }"
+  class="lampe">
+  ampoule
+</div>
+
+<p
+  [style]="{
+    color: color,
+    fontSize: '75px',
+    fontFamily: 'garamond'
+  }"
+>first works!</p>
 <div class="alert alert-danger">
   <app-user-info (ccPapa)="showMessage($event)" [section]="'RT4'" [user]="{name: 'douaa', email: 'douaa@gmail.com'}"/>
 </div>
+<<<<<<< HEAD
 <div
   (dblclick)="checkUser()"
+=======
+<!-- <div
+>>>>>>> 340c86d8606b2e7d67c5d401bbb410c4fe9329fe
   (click)="changeColor()"
   [style.backgroundColor]="backgroundColor"
   class="lampe">
   lampe
-</div>
+</div> -->
 <input type="color" [(ngModel)]="backgroundColor">
 <input (change)="changeOpenColor(myInput)" #myInput type="text">
 {{backgroundColor}}
