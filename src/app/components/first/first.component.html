@@ -25,17 +25,14 @@
 <div class="alert alert-danger">
   <app-user-info (ccPapa)="showMessage($event)" [section]="'RT4'" [user]="{name: 'douaa', email: 'douaa@gmail.com'}"/>
 </div>
-<<<<<<< HEAD
+
 <div
   (dblclick)="checkUser()"
-=======
-<!-- <div
->>>>>>> 340c86d8606b2e7d67c5d401bbb410c4fe9329fe
   (click)="changeColor()"
   [style.backgroundColor]="backgroundColor"
   class="lampe">
   lampe
-</div> -->
+</div>
 <input type="color" [(ngModel)]="backgroundColor">
 <input (change)="changeOpenColor(myInput)" #myInput type="text">
 {{backgroundColor}}
