@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-second',
@@ -8,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class SecondComponent {
 
+  name = 'rt4';
+  activatedRoute = inject(ActivatedRoute);
+  constructor() {
+    console.log(this.activatedRoute.snapshot);
+    this.name = this.activatedRoute.snapshot.params['test']
+  }
 }

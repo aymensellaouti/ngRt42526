@@ -17,7 +17,7 @@ export class UserInfoComponent {
     name: 'aymen',
     email: 'aymen@gmail.com',
   });
-  section = input.required<string>({});
+  section = input<string>('RT');
 
   sendMessageToDad() {
     this.ccPapa.emit('hello Papa');

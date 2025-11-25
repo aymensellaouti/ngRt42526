@@ -1,0 +1,10 @@
+<form #myForm="ngForm">
+  name:<input #nameInput="ngModel" required ngModel name="name" type="text" class="form-control">
+  @if (nameInput.invalid && nameInput.touched) {
+    <div class="alert alert-danger">
+      Le name est un champ obligatoire
+    </div>
+  }
+  age :<input required ngModel name="age" type="text" class="form-control">
+  <button (click)="processForm(myForm)" class="btn btn-primary">submit</button>
+</form>

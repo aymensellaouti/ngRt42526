@@ -3,6 +3,7 @@
   <app-user-info (ccPapa)="showMessage($event)" [section]="'RT4'" [user]="{name: 'douaa', email: 'douaa@gmail.com'}"/>
 </div>
 <div
+  (dblclick)="checkUser()"
   (click)="changeColor()"
   [style.backgroundColor]="backgroundColor"
   class="lampe">

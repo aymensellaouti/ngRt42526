@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { UserInfoComponent } from "../user-info/user-info.component";
+import { UserInfoComponent } from '../user-info/user-info.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-first',
@@ -12,13 +13,18 @@ export class FirstComponent {
   // State
   backgroundColor = 'yellow';
   openColor = 'yellow';
+
+  router = inject(Router);
   constructor() {
     // setInterval(() => {
-      // }, 1500)
-    }
-    showMessage(message: string) {
-      alert(`message de mon fils: ${message}`)
-    }
+    // }, 1500)
+  }
+  showMessage(message: string) {
+    alert(`message de mon fils: ${message}`);
+  }
+  checkUser() {
+    this.router.navigate(['user']);
+  }
 
   // Behaviour
   changeColor() {
